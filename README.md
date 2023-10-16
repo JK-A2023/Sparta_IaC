@@ -2,10 +2,11 @@
 
 The practice of managing and provisioning infrastructure (e.g., servers, networks, databases) using code and automation scripts, allowing for consistent, repeatable, and version-controlled infrastructure deployments.
 
+### Example:
 
-If we have a client who would like us to create two VM's on the cloud, we can have a script that does it for us. Any script that helps us build infrascture is IaC.
+A client who would like us to create two VM's on the cloud, we can have a script that does it for us. 
 
-If you have 100 VM's, all of which that need to be updatd. Do you SSH into each of them to update, or run a script that updates them all.
+Any script that helps us build infrascture is IaC.
 
 # Configuration Management:
 
