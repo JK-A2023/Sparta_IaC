@@ -9,8 +9,6 @@
 
 Use Ansible automation to install software, automate daily tasks, provision infrastructure, improve security and compliance, patch systems, and share automation across your organization.
 
-
-
 ## How does it work?
 
 - Ansible connects to your nodes and pushes out small programs - "modules" - to these nodes.
@@ -21,11 +19,16 @@ Use Ansible automation to install software, automate daily tasks, provision infr
 
 ### Agentless
 
-- The nodes that ansible manages do not require any software to be installed on them.
+- The nodes that ansible manages do not requ    ire any software to be installed on them.
 - Ansible uses SSH protocl to connect to servers and run tasks.
 - Once connected, it transfers the mopdules required by your command or playbook to the remote machine(s) for execution.
 - Uses YAML templates so users can program repetitive tasks to happen automatically.
 
-
+## Diagram:
 
 ![img.png](ansible_images/ansible_diag_1.png)
+
+1. An instance on the cloud.
+2. Can SSH into the Ansible controller.
+3. These are our instances that Ansible can connect to via SSH. From here it can configure management.
+4. Ansible vault is where all keys for each of the instances are kept, meaning that Ansible can connect to any and all cloud providers at the same time.
