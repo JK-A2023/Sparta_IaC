@@ -15,3 +15,6 @@
    1. `sudo apt install ansible -y`
 7. Open secondary Git Bash terminal to scp across the .pem:
    1. `scp -i "~/.ssh/file.pem" ~/.ssh/file.pem ubuntu@<public_DNS>/.ssh`
+8. Check within your EC2 terminals SSH directory to see if the transfer was successful.
+
+
