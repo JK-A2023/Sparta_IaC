@@ -36,14 +36,17 @@
 ```
 [web]
 ec2-instance ansible_host=<public_ip> ansible_user=ubuntu ansible_ss_private_key_file=~/.ssh/file.pem
+```
 
 OR
 
+```
 [web]
 ec2-instance ansible_host=<public_ip> ansible_user=ubuntu ansible_ss_private_key_file=/home/ubuntu/.ssh/file.pem
+```
 
 (Using sudo gives you super user permissions, meaning the terminal may search the root directory for the ssh folder. Specifying the home/ubuntu directory helps to specify.)
-```
+
 
 4. `sudo ansible web -m ping` OR `ansible web -m ping`
    1. Again, using sudo may search the root directory for the /.ssh directory.
