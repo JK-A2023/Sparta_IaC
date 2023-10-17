@@ -34,6 +34,20 @@ Use Ansible automation to install software, automate daily tasks, provision infr
 4. This is another virtual machine. This particular one will be used for database deployment, being know as the "DB Node". Ansible can ssh into this node.
 5. These are the various examples of cloud providers Ansible can work with.
 
+## Ad-Hoc Commands:
+
+An Ad-Hoc command are commands used for simple tasks that don't need to be repeated - one off tasks.
+
+One example could be to check the operating system of the target system:
+
+```
+sudo ansible web -a "uname -a"
+
+OR
+
+ansible web -a "uname -a"
+```
+
 # Ansible Playbook:
 
 An Ansible Playbook is a blueprint of automation tasks, which are IT actions executed with limited manual effort across an inventory of IT solutions. Playbooks tell Ansible what to do to which devices.
