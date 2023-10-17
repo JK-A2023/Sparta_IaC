@@ -63,7 +63,18 @@ ec2-instance | SUCCESS => {
 }
 ```
 
-5. `sudo ansible web -a "uname -a"` OR `ansible web -a "uname -a"` - Gather operating system information.
+5. Gather operating system information.
+
+```
+sudo ansible web -a "uname -a"
+```
+
+OR
+
+```
+ansible web -a "uname -a"
+```
+
 
 # YAML Provisioning:
 
