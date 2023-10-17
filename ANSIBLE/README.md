@@ -26,12 +26,13 @@ Use Ansible automation to install software, automate daily tasks, provision infr
 
 ## Diagram:
 
-![img.png](ansible_images/ansible_diag_1.png)
+![img.png](ansible_images/readme_images/image.png)
 
-1. An instance on the cloud.
-2. Can SSH into the Ansible controller.
-3. These are our instances that Ansible can connect to via SSH. From here it can configure management.
-4. Ansible vault is where all keys for each of the instances are kept, meaning that Ansible can connect to any and all cloud providers at the same time.
+1. A virtual machine instance on the cloud. This is the "Master" or "Controller" node.
+2. The Controller node is the installation location of Ansible. From here, the user can set up Ansible, and begin configuring other EC2s..
+3. This is another virtual machine. This particular one will be used for app deployment, being know as the "App Node". Ansible can ssh into this node.
+4. This is another virtual machine. This particular one will be used for database deployment, being know as the "DB Node". Ansible can ssh into this node.
+5. These are the various examples of cloud providers Ansible can work with.
 
 # Ansible Playbook:
 
