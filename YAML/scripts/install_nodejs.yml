@@ -1,0 +1,29 @@
+# Create a playbook to provision Nodejs 12 in the web node
+---
+
+# where do you want to install or run this playbook?
+- hosts: web
+
+# find the facts (see the logs) - optional
+  gather_facts: yes
+
+# provide admin access to this playbook - use sudo
+  become: true
+
+# provide the actual instructions - install NodeJS
+  tasks:
+  - name: Install the gpg key for nodejs LTS
+    apt_key:
+      url: "https://deb.nodesource.com/gpgkey/nodesource.gpg.key"
+      state: present
+
+  - name: Add Node.js 12.x repository
+    apt_repository:
+      repo: deb https://deb.nodesource.com/node_12.x focal main
+      state: present
+      update_cache: yes
+    
+  - name: Install Node.js and npm
+    apt:
+      name: nodejs
+      state: present

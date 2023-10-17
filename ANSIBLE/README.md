@@ -32,3 +32,11 @@ Use Ansible automation to install software, automate daily tasks, provision infr
 2. Can SSH into the Ansible controller.
 3. These are our instances that Ansible can connect to via SSH. From here it can configure management.
 4. Ansible vault is where all keys for each of the instances are kept, meaning that Ansible can connect to any and all cloud providers at the same time.
+
+# Ansible Playbook:
+
+An Ansible Playbook is a blueprint of automation tasks, which are IT actions executed with limited manual effort across an inventory of IT solutions. Playbooks tell Ansible what to do to which devices.
+
+Instead of manually applying the same action to hundreds or thousands of similar technologies across IT environments, executing a playbook automatically completes the same action for the specified type of inventory—such as a set of routers.
+
+Playbooks are used to automate IT infrastructure, without having to do it manually on many machines.
