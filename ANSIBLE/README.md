@@ -40,13 +40,13 @@ An Ad-Hoc command are commands used for simple tasks that don't need to be repea
 
 One example could be to check the operating system of the target system:
 
-```
-sudo ansible web -a "uname -a"
+
+```sudo ansible web -a "uname -a"```
 
 OR
 
-ansible web -a "uname -a"
-```
+```ansible web -a "uname -a"```
+
 
 # Ansible Playbook:
 
