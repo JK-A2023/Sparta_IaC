@@ -1,0 +1,11 @@
+# this playbook is to set up mongodb in the db ec2
+
+---
+
+- hosts: db
+
+  gather_facts: yes
+  become:true
+  tasks:
+  - name: setup mongodb in db ec2
+    apt: pkg=mongodb state=present

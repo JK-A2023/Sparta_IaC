@@ -38,17 +38,18 @@ sudo chmod 400 file.pem
 1. `cd /etc/ansible` - Move into Ansible directory.
 2. `sudo nano hosts` - Open hosts file in nano.
 3. Type the following into the hosts nano:
+4. Make sure to give them different names. If you give the same name, they act as mutable variables, and the last value with the same name with be chosen, i.e., the first one will be overwritten.
 
 ```
 [web]
-ec2-instance ansible_host=<public_ip> ansible_user=ubuntu ansible_ss_private_key_file=~/.ssh/file.pem
+ec2-instance-app ansible_host=<public_ip> ansible_user=ubuntu ansible_ss_private_key_file=~/.ssh/file.pem
 ```
 
 OR
 
 ```
 [web]
-ec2-instance ansible_host=<public_ip> ansible_user=ubuntu ansible_ss_private_key_file=/home/ubuntu/.ssh/file.pem
+ec2-instance-db ansible_host=<public_ip> ansible_user=ubuntu ansible_ss_private_key_file=/home/ubuntu/.ssh/file.pem
 ```
 
 (Using sudo gives you super user permissions, meaning the terminal may search the root directory for the ssh folder. Specifying the home/ubuntu directory helps to specify.)
