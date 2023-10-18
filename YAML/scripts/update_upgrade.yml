@@ -1,0 +1,15 @@
+---
+- hosts: web,db 
+  become: yes 
+
+  tasks:
+    - name: Update APT
+      apt:
+        update_cache: yes 
+      become: yes
+
+    - name: Upgrade APT Packages
+      apt:
+        upgrade: yes
+        autoremove: yes 
+      become: yes

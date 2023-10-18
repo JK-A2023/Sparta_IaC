@@ -14,7 +14,7 @@
 6. Install:
    1. `sudo apt install ansible -y`
 7. Open secondary Git Bash terminal to scp across the .pem:
-   1. `scp -i "~/.ssh/file.pem" ~/.ssh/file.pem ubuntu@<public_DNS>/.ssh`
+   1. `scp -i "~/.ssh/file.pem" ~/.ssh/file.pem ubuntu@<public_DNS>:~/.ssh`
 8. Check within your EC2 terminals SSH directory to see if the transfer was successful.
 
 # Verify connection to App EC2:
@@ -24,8 +24,14 @@
    2. `sudo so`
    3. `cd .ssh`
    4. This may help later.
-2. `ssh -i "file.pem" ubuntu@ec2-<ip_here>.eu-west-1.compute.amazonaws.com` - SSH into app instance.
-3. `exit` - Exit from app instance.
+2. Change permissions to allow file to be used:
+
+```
+sudo chmod 400 file.pem
+```
+
+3. `ssh -i "file.pem" ubuntu@ec2-<ip_here>.eu-west-1.compute.amazonaws.com` - SSH into app instance.
+4. `exit` - Exit from app instance.
 
 # Ansible Connection:
 
@@ -77,6 +83,8 @@ ansible web -a "uname -a"
 
 
 # YAML Provisioning:
+
+NOTE: As the Ansible controller has completed update & upgrade, running this installation without updating and upgrading the target nodes will not work. Run the update_upgrade.yml script first.
 
 1. Start by creating a YAML file for our App instance provision file:
 
