@@ -36,7 +36,7 @@ sudo apt install ansible -y
 7. Open secondary Git Bash terminal to scp across the .pem:
 
 ```
-scp -i "~/.ssh/file.pem" ~/.ssh/file.pem ubuntu@<public_DNS>:~/.ssh
+scp -i ~/.ssh/file.pem ~/.ssh/file.pem ubuntu@<public_DNS>:~/.ssh
 ```
 
 8. Check within your EC2 terminals SSH directory to see if the transfer was successful.
@@ -80,20 +80,36 @@ exit
 
 # Ansible Connection:
 
-1. `cd /etc/ansible` - Move into Ansible directory.
-2. `sudo nano hosts` - Open hosts file in nano.
+1. Move into Ansible directory:
+
+```
+cd /etc/ansible
+```
+
+2. Open hosts file in nano:
+
+```
+sudo nano hosts
+```
+
 3. Type the following into the hosts nano:
-4. Make sure to give them different names. If you give the same name, they act as mutable variables, and the last value with the same name with be chosen, i.e., the first one will be overwritten.
+   1. Make sure to give them different names. If you give the same name, they act as mutable variables, and the last value with the same name with be chosen, i.e., the first one will be overwritten.
 
 ```
 [web]
-ec2-instance-app ansible_host=<public_ip> ansible_user=ubuntu ansible_ss_private_key_file=~/.ssh/file.pem
+ec2-instance-app ansible_host=<public_ip> ansible_user=ubuntu ansible_ssh_private_key_file=~/.ssh/file.pem
+
+[db]
+ec2-instance-db ansible_host=<public_ip> ansible_user=ubuntu ansible_ssh_private_key_file=~/.ssh/file.pem
 ```
 
 OR
 
 ```
 [web]
+ec2-instance-app ansible_host=<public_ip> ansible_user=ubuntu ansible_ss_private_key_file=/home/ubuntu/.ssh/file.pem
+
+[db]
 ec2-instance-db ansible_host=<public_ip> ansible_user=ubuntu ansible_ss_private_key_file=/home/ubuntu/.ssh/file.pem
 ```
 
