@@ -43,19 +43,40 @@ scp -i "~/.ssh/file.pem" ~/.ssh/file.pem ubuntu@<public_DNS>:~/.ssh
 
 # Verify connection to App EC2:
 
-1. `cd ~/.ssh`
-   1. Alternatively: 
-   2. `sudo so`
-   3. `cd .ssh`
-   4. This may help later.
+1. Move into the .ssh directory:
+
+```
+cd ~/.ssh
+```
+
+OR
+
+```
+sudo so
+```
+```
+cd .ssh
+```
+This may help later.
+
+
 2. Change permissions to allow file to be used:
 
 ```
 sudo chmod 400 file.pem
 ```
 
-3. `ssh -i "file.pem" ubuntu@ec2-<ip_here>.eu-west-1.compute.amazonaws.com` - SSH into app instance.
-4. `exit` - Exit from app instance.
+3. SSH into app instance:
+
+```
+ssh -i "file.pem" ubuntu@ec2-<ip_here>.eu-west-1.compute.amazonaws.com
+```
+
+4. Exit from app instance:
+
+```
+exit
+```
 
 # Ansible Connection:
 
