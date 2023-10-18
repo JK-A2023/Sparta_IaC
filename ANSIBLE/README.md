@@ -19,7 +19,7 @@ Use Ansible automation to install software, automate daily tasks, provision infr
 
 ### Agentless
 
-- The nodes that ansible manages do not requ    ire any software to be installed on them.
+- The nodes that ansible manages do not require any software to be installed on them.
 - Ansible uses SSH protocl to connect to servers and run tasks.
 - Once connected, it transfers the mopdules required by your command or playbook to the remote machine(s) for execution.
 - Uses YAML templates so users can program repetitive tasks to happen automatically.
