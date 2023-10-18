@@ -32,7 +32,7 @@ Use Ansible automation to install software, automate daily tasks, provision infr
 2. The Controller node is the installation location of Ansible. From here, the user can set up Ansible, and begin configuring other EC2s..
 3. This is another virtual machine. This particular one will be used for app deployment, being know as the "App Node". Ansible can ssh into this node.
 4. This is another virtual machine. This particular one will be used for database deployment, being know as the "DB Node". Ansible can ssh into this node.
-5. These are the various examples of cloud providers Ansible can work with.
+5. Ansible Vault is a feature in Ansible that allows you to encrypt sensitive data such as passwords, keys, and other secrets within your Ansible playbooks and configuration files. It provides a way to protect this sensitive information and ensure that only authorized users can access it. These are also some various examples of cloud providers Ansible can work with.
 
 ## Ad-Hoc Commands:
 
