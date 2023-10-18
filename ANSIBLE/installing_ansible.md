@@ -43,7 +43,7 @@ scp -i ~/.ssh/file.pem ~/.ssh/file.pem ubuntu@<public_DNS>:~/.ssh
 
 # Verify connection to App EC2:
 
-1. Move into the .ssh directory:
+1. Within the Ansible Controller, move into the .ssh directory:
 
 ```
 cd ~/.ssh
@@ -66,7 +66,7 @@ This may help later.
 sudo chmod 400 file.pem
 ```
 
-3. SSH into app instance:
+1. SSH into the nodes to test connection:
 
 ```
 ssh -i "file.pem" ubuntu@ec2-<ip_here>.eu-west-1.compute.amazonaws.com
@@ -80,7 +80,7 @@ exit
 
 # Configuring Hosts:
 
-1. Move into Ansible directory:
+1. Within the Ansible controller, move into Ansible directory:
 
 ```
 cd /etc/ansible

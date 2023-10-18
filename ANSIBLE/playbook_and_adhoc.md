@@ -28,3 +28,10 @@ OR
 ansible web -a "uname -a"
 ```
 
+## Examples:
+
+1. Check the status of a program within your app node:
+
+```
+sudo ansible web -a "sudo systemctl status nginx"
+```
