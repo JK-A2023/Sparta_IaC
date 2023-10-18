@@ -4,17 +4,41 @@
 2. Run the following to see if you already have Ansible:
    1. `ansible --version`
 3. Update and Upgrade:
-   1. `sudo apt update -y`
-   2. `sudo apt upgrade -y `
+
+```
+sudo apt update -y
+```
+```
+sudo apt upgrade -y
+```
+
 4. Setup:
-   1. `sudo apt-get install software-properties-common`
-   2. `sudo apt-add-repository ppa:ansible/ansible`
+
+```
+sudo apt-get install software-properties-common
+```
+```
+sudo apt-add-repository ppa:ansible/ansible
+```
+
 5. Update:
-   1. `sudo apt update -y`
+
+```
+sudo apt update -y
+```
+
 6. Install:
-   1. `sudo apt install ansible -y`
+
+```
+sudo apt install ansible -y
+```
+
 7. Open secondary Git Bash terminal to scp across the .pem:
-   1. `scp -i "~/.ssh/file.pem" ~/.ssh/file.pem ubuntu@<public_DNS>:~/.ssh`
+
+```
+scp -i "~/.ssh/file.pem" ~/.ssh/file.pem ubuntu@<public_DNS>:~/.ssh
+```
+
 8. Check within your EC2 terminals SSH directory to see if the transfer was successful.
 
 # Verify connection to App EC2:

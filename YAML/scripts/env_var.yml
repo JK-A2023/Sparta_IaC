@@ -1,0 +1,20 @@
+---
+# This playbook is to set the DB_HOST env var in the app instance.
+
+- hosts: web
+  gather_facts: yes
+  become: true
+
+  tasks:
+    - name: exports the DB_HOST environment variable.
+      become: true 
+      lineinfile:
+        path: /etc/environment
+        line: 'DB_HOST=mongodb://52.51.20.124:27017/posts'
+        state: present
+      notify: Reload environment  
+
+  handlers:
+    - name: Reload environment
+      become: true  
+      command: 'source /etc/environment'
