@@ -34,28 +34,3 @@ Use Ansible automation to install software, automate daily tasks, provision infr
 4. This is another virtual machine. This particular one will be used for database deployment, being know as the "DB Node". Ansible can ssh into this node.
 5. Ansible Vault is a feature in Ansible that allows you to encrypt sensitive data such as passwords, keys, and other secrets within your Ansible playbooks and configuration files. It provides a way to protect this sensitive information and ensure that only authorized users can access it. These are also some various examples of cloud providers Ansible can work with.
 
-## Ad-Hoc Commands:
-
-An Ad-Hoc command are commands used for simple tasks that don't need to be repeated - one off tasks.
-
-One example could be to check the operating system of the target system:
-
-
-```
-sudo ansible web -a "uname -a"
-```
-
-OR
-
-```
-ansible web -a "uname -a"
-```
-
-
-# Ansible Playbook:
-
-An Ansible Playbook is a blueprint of automation tasks, which are IT actions executed with limited manual effort across an inventory of IT solutions. Playbooks tell Ansible what to do to which devices.
-
-Instead of manually applying the same action to hundreds or thousands of similar technologies across IT environments, executing a playbook automatically completes the same action for the specified type of inventory—such as a set of routers.
-
-Playbooks are used to automate IT infrastructure, without having to do it manually on many machines.
