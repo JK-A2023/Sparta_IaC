@@ -116,10 +116,20 @@ ec2-instance-db ansible_host=<public_ip> ansible_user=ubuntu ansible_ss_private_
 (Using sudo gives you super user permissions, meaning the terminal may search the root directory for the ssh folder. Specifying the home/ubuntu directory helps to specify.)
 
 
-4. `sudo ansible web -m ping` OR `ansible web -m ping`
+4. Ping:
    1. Again, using sudo may search the root directory for the /.ssh directory.
    2. Here we are using the web group created in the hosts folder above to ping our app instance.
    3. The result, if correct, should be:
+
+```
+sudo ansible web -m ping 
+```
+
+OR
+
+```
+ansible web -m ping
+```
 
 ```
 ec2-instance | SUCCESS => {
@@ -131,7 +141,7 @@ ec2-instance | SUCCESS => {
 }
 ```
 
-5. Gather operating system information.
+1. Gather operating system information.
 
 ```
 sudo ansible web -a "uname -a"
