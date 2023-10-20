@@ -14,7 +14,7 @@ resource "aws_instance" "andrew-iac-test" {
   ami = var.web-app-ami-id
   instance_type = var.instance_size
   tags = {
-    Name = "andrew-iac-tf-test"
+    Name = var.tag-name
   }
 
 
