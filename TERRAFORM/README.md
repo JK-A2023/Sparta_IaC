@@ -16,3 +16,9 @@
 4. IBM Cloud
 5. Oracle
 
+ ### How does it help businesses:
+
+ 1. Manual provisioning is slow and cumbersome
+    1. Provisioning infrastructure through point-and-click GUIs or custom scripts is slow, error-prone, inefficient, and doesn't scale.
+ 2. Automate infrastructure provisioning on any cloud
+    1. With Terraform, provisioning and security can be automated with declarative infrastructure and policy as code. Infrastructure and policies are codified, shared, versioned, and executed within a workflow that is consistent across all infrastructure.

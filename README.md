@@ -7,6 +7,7 @@ This allows for consistent, repeatable, and version-controlled infrastructure de
 ## How is it made:
 
 - In IaC, configurations files are created that contain your infrastructure specifications. 
+  - E.g., Terraform.
 - This makes it easier to edit and distrubute configurations.
 - Also ensures your provision every environment the same.
 - By codifying and documenting your configuration specifications, IaC aids configuration management.
