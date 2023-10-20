@@ -1,7 +1,6 @@
-variable.tf
 .terraform
-variable.tf
 .terraform.lock.hcl
-windows_amd64
+variables.tf
 terraform.tfstate
 terraform.tfstate.backup
+.terraform.tfstate.lock.info
