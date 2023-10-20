@@ -4,3 +4,5 @@ variable.tf
 variable.tf
 .terraform.lock.hcl
 windows_amd64
+terraform.tfstate
+terraform.tfstate.backup
