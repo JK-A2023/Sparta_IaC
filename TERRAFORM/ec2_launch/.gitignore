@@ -2,10 +2,10 @@ variable.tf
 
 terraform-provider-aws_v5.21.0_x5.exe
 
-TERRAFORM/ec2_launch/windows_amd64
+terraform-provider-aws_v5.21.0_x5.exe
 
-TERRAFORM/ec2_launch/.terraform.lock.hcl
+.terraform.lock.hcl
 
-TERRAFORM/ec2_launch/terraform.tfstate
+terraform.tfstate
 
-TERRAFORM/ec2_launch/terraform.tfstate.backup
+terraform.tfstate.backup

@@ -2,7 +2,7 @@
 provider "aws" {
 
 # Where is the region:
-  region = aws-region
+  region = var.aws-region
 
 }
 
@@ -11,8 +11,8 @@ provider "aws" {
 # create a server/resource on the cloud - ec2 on AWS
 
 resource "aws_instance" "andrew-iac-test" {
-  ami = "ami-0943382e114f188e8"
-  instance_type = "t2.micro"
+  ami = var.web-app-ami-id
+  instance_type = var.instance_size
   tags = {
     Name = "andrew-iac-tf-test"
   }
